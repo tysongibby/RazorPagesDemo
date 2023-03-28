@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Logging;
 
 namespace RazorPagesUI.Pages
 {
@@ -13,16 +14,13 @@ namespace RazorPagesUI.Pages
         }
 
         [BindProperty(SupportsGet = true)]
-        public int Id { get; set; } = 0;
-
-        [BindProperty(SupportsGet = true)]
-        public string FirstName { get; set; }
+        public string City { get; set; }
 
         public void OnGet()
         {
-            if (string.IsNullOrWhiteSpace(FirstName))
+            if (string.IsNullOrWhiteSpace(City))
             {
-                FirstName = "User";
+                City = "The Web";
             }
         }
 
