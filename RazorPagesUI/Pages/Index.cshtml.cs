@@ -22,6 +22,8 @@ namespace RazorPagesUI.Pages
             {
                 City = "The Web";
             }
+
+            // Get data from database to initialize page
         }
 
         //public void OnPost()

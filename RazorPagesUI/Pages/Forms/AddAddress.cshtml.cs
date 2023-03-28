@@ -16,10 +16,12 @@ namespace RazorPagesUI.Pages.Forms
 
         public IActionResult OnPost()
         {
-            //if (ModelState.IsValid == false)
-            //{
-            //    return Page();
-            //}
+            if (ModelState.IsValid == false)
+            {
+                return Page();
+            }
+
+            // Save Model to Database
 
             return RedirectToPage("/Index", new { Address.City });
         }
